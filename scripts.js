@@ -131,6 +131,9 @@ function DOM(board){
         if(board.checkWinCondition() != "."){
             displayWinner(board.checkWinCondition());
         }
+        else if(board.isDraw()){
+            displayDraw();
+        }
         
     }
 
@@ -139,6 +142,13 @@ function DOM(board){
         winnerText.innerHTML = winner + " won the game!";
         winnerText.classList.add("winner-text")
         windowContainer.appendChild(winnerText);
+    }
+
+    function displayDraw(){
+        const drawText = document.createElement("p");
+        drawText.innerHTML = "The game is a draw.";
+        drawText.classList.add("winner-text")
+        windowContainer.appendChild(drawText);
     }
 
     function swapPlayer(){

@@ -6,11 +6,20 @@
     padding:32px;
 }
 
+.play-space{
+    display:flex;
+    gap:32px;
+}
+
+.input-field{
+    display:flex;
+    flex-direction: column;
+}
+
 .board-container{
     display:grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
-
 }
 
 .cell{
@@ -30,4 +39,12 @@
 .winner-text{
     font-size: 72px;
     font-weight: bold;
+}
+
+button{
+    margin-top: 16px;
+    border:0;
+    background-color: aquamarine;
+    border-radius: 8px;
+    padding: 8px 16px;
 }
